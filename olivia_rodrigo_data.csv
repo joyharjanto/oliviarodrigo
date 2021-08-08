@@ -1,11 +1,6 @@
-{
-  "track-one": {
-    "title": "brutal",
-    "lyrics": "
-    I want it to be, like, messy
-    I'm so insecure, I think
-    That I'll die before I drink
-    And I'm so caught up in the news
+Number,Title,Lyrics
+1,Brutal,"I want it to be, like, messy I'm so insecure, I think 
+    That I'll die before I drink And I'm so caught up in the news 
     Of who likes me and who hates you
     And I'm so tired that I might
     Quit my job, start a new life
@@ -43,11 +38,8 @@
     God, it's brutal out here
     Got a broken ego, broken heart
     (It's brutal out here, it's brutal out here)
-    And God, I don't even know where to start "
-  },
-  "track-two": {
-    "title": "traitor",
-    "lyrics": "Ooh, ooh, ooh, ah
+    And God, I don't even know where to start"
+2,traitor,"Ooh, ooh, ooh, ah
     Ah, ah, ah, ah
     Brown guilty eyes and little white lies, yeah
     I played dumb but I always knew
@@ -90,11 +82,8 @@
     But you're still, you're still a traitor (ah-ah-ah)
     Yeah, you're still a traitor
     God, I wish that you had thought this through
-    Before I went and fell in love with you "
-  },
-  "track-three": {
-    "title": "drivers license",
-    "lyrics": "I got my driver's license last week
+    Before I went and fell in love with you"
+3,drivers license,"I got my driver's license last week
     Just like we always talked about
     'Cause you were so excited for me
     To finally drive up to your house
@@ -135,10 +124,7 @@
     'Cause you didn't mean what you wrote in that song about me
     'Cause you said forever, now I drive alone past your street
     Yeah, you said forever, now I drive alone past your street"
-  },
-  "track-four": {
-    "title": "1 step forward, 3 steps back",
-    "lyrics": "Called you on the phone today
+4,"1 step forward, 3 steps back","Called you on the phone today
     Just to ask you how you were
     All I did was speak normally
     Somehow, I still struck a nerve
@@ -171,10 +157,7 @@
     Do you love me, want me, hate me?
     Boy, I don't understand
     No, I don't understand"
-  },
-  "track-five": {
-    "title": "deja vu",
-    "lyrics": "Car rides to Malibu
+5,deja vu,"Car rides to Malibu
     Strawberry ice cream, one spoon for two
     And tradin' jackets
     Laughin' 'bout how small it looks on you
@@ -214,11 +197,8 @@
     A different girl now, but there's nothing new
     I know you get déjà vu
     I know you get déjà vu
-    I know you get déjà vu"`
-  },
-  "track-six": {
-    "title": "good 4 u",
-    "lyrics": "Well, good for you, I guess you moved on really easily
+    I know you get déjà vu"
+6,good 4 u,"Well, good for you, I guess you moved on really easily
     You found a new girl and it only took a couple weeks
     Remember when you said that you wanted to give me the world? (Ah-ah-ah-ah)
     And good for you, I guess that you've been workin' on yourself
@@ -268,10 +248,7 @@
     But you're so unaffected, I really don't get it
     But I guess good for you
     Well, good for you, I guess you moved on really easily"
-  },
-  "track-seven": {
-    "title": "enough for you",
-    "lyrics": "I wore make-up when we dated
+7,enough for you,"I wore make-up when we dated
     'Cause I thought you'd like me more
     If I looked like the other prom queens
     I know that you loved before
@@ -320,10 +297,7 @@
     For you
     Enough for you
     No, nothing's enough for you"
-  },
-  "track-eight": {
-    "title": "happier",
-    "lyrics": "We broke up a month ago
+8,happier,"We broke up a month ago
     Your friends are mine
     You know I know you've moved on
     Found someone new
@@ -370,12 +344,8 @@
     I'm selfish, I know
     Can't let you go
     So find someone great but don't find no one better
-    I hope you're happy but don't be happier
-    "
-  },
-  "track-nine": {
-    "title": "jealousy, jealousy",
-    "lyrics": "I kinda wanna throw my phone across the room
+    I hope you're happy but don't be happier"
+9,"jealousy, jealousy","I kinda wanna throw my phone across the room
     'Cause all I see are girls too good to be true
     With paper-white teeth and perfect bodies
     Wish I didn't care
@@ -425,10 +395,7 @@
     Anyone, anyone else
     Jealousy, jealousy
     Started followin' me"
-  },
-  "track-ten": {
-    "title": "favorite crime",
-    "lyrics": "Know that I loved you so bad
+10,favorite crime,"Know that I loved you so bad
     I let you treat me like that
     I was your willing accomplice, honey
     And I watched as you fled the scene
@@ -459,10 +426,7 @@
     Well, I hope I was your favorite crime
     Your favorite crime, your favorite crime
     'Cause, baby, you were mine"
-  },
-  "track-eleven": {
-    "title": "hope ur ok",
-    "lyrics": "I knew a boy once, when I was small
+11,good 4 u,"I knew a boy once, when I was small
     A tow-head blond, with eyes of salt
     He played the drum in the marching band
     His parents cared more about the Bible
@@ -490,7 +454,4 @@
     Well, I hope you know how proud I am you were created
     With the courage to unlearn all of their hatred
     God, I hope that you're happier today
-    'Cause I love you, and I hope that you're okay"
-  }
-
-}
+    'Cause I love you, and I hope that you're oka"
