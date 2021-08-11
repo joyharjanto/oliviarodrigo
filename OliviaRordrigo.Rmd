@@ -3,26 +3,83 @@ title: "OliviaRodrigoData"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+setwd("~/Desktop/oliviarodrigo")
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+library(dplyr)
+library(tidyverse)
+library(tm)
+library(tidytext)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+sour <- read.csv("olivia_rodrigo_data.csv", stringsAsFactors = FALSE)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+replace \n with space, remove punctuations, make everything lower case
+
+```{r}
+sour$Lyrics[1]
+```
+
+```{r}
+gsub("[\n]", "", sour$Lyrics)
+```
+```{r}
+sour$Lyrics <- gsub("[\r\n]", " ", sour$Lyrics)
+```
+```{r}
+sour$Lyrics <- tolower(sour$Lyrics)
+```
+```{r}
+sour$Lyrics <- gsub("i'm", "i am", sour$Lyrics)
+sour$Lyrics <- gsub("i'll", "i will", sour$Lyrics)
+sour$Lyrics <- gsub("you're", "you are", sour$Lyrics)
+
+```
+remove comma in r not between words
+
+```{r}
+sour$Lyrics <- gsub("[,()'?]","",sour$Lyrics)
+sour$Lyrics <- gsub("[-]"," ",sour$Lyrics)
+```
+
+```{r}
+sour_df <- tibble(txt = sour$Lyrics) 
+```
+```{r}
+library(janeaustenr)
+```
+```{r}
+tibble(txt = prideprejudice)
+```
+```{r}
+sour_df <- tibble(sour_df)
+```
+```{r}
+library(janeaustenr)
+```
+```{r}
+austen_books() %>%
+  unnest_tokens(word, text) %>%
+  count(book, word, sort = TRUE)
+```
+```{r}
+sour_tibble <- tibble(line=1:11,text=sour_df$txt)
+```
+```{r}
+manual_stop_words <- c("and", "the","that","to","am","are","so","for","be","it","a","of","in","cause","is","are","get")
+```
+
+```{r}
+data(stop_words)
+```
+```{r}
+sour_tibble %>%
+  unnest_tokens(word,text) %>% 
+  anti_join(stop_words) %>%
+  count(word, sort = TRUE) %>%
+  filter(n>10)
+```
