@@ -77,9 +77,27 @@ manual_stop_words <- c("and", "the","that","to","am","are","so","for","be","it",
 data(stop_words)
 ```
 ```{r}
-sour_tibble %>%
-  unnest_tokens(word,text) %>% 
-  anti_join(stop_words) %>%
-  count(word, sort = TRUE) %>%
-  filter(n>10)
+common_words <- sour_tibble %>%
+                unnest_tokens(word,text) %>% 
+                anti_join(stop_words) %>%
+                count(word, sort = TRUE) %>%
+                filter(n>10)
+```
+
+```{r}
+common_words <- common_words$word
+```
+
+```{r}
+sour$Lyrics[1]
+```
+```{r}
+str_squish(sour$Lyrics[1])
+```
+```{r}
+data.frame(table(unlist(strsplit(str_squish(sour$Lyrics[1])," "))))
+```
+
+```{r}
+sapply(unlist(strsplit(str_squish(sour$Lyrics[1])," ")), function(x) sum(str_count(x, "parallel")))
 ```
