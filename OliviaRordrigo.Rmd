@@ -95,9 +95,64 @@ sour$Lyrics[1]
 str_squish(sour$Lyrics[1])
 ```
 ```{r}
-data.frame(table(unlist(strsplit(str_squish(sour$Lyrics[1])," "))))
+test_df <- data.frame(table(unlist(strsplit(str_squish(sour$Lyrics[1])," "))))
+colnames(test_df) <- c("Word","Frequency")
+
+test_df$Word <- as.character(test_df$Word)
+sum(test_df$Word == common_words[1])
+```
+```{r}
+common_words
+sour$Title
+#11x13
 ```
 
 ```{r}
-sapply(unlist(strsplit(str_squish(sour$Lyrics[1])," ")), function(x) sum(str_count(x, "parallel")))
+sour_terms <- data.frame(matrix(NA, nrow = 11, ncol = 13))
+```
+
+```{r}
+for(i in 1:length(common_words)){
+  print(i)
+  colnames(sour_terms)[i] <- common_words[i]
+}
+
+for(j in 1:length(sour$Title)){
+  print(j)
+  rownames(sour_terms)[j] <- sour$Title[j]
+}
+
+```
+
+```{r}
+common_words
+```
+```{r}
+sour_terms[1,]
+```
+```{r}
+
+for(l in 1:nrow(sour_terms)){
+  test_df <- data.frame(table(unlist(strsplit(str_squish(sour$Lyrics[l])," "))))
+  colnames(test_df) <- c("Word","Frequency")
+  
+  test_df$Word <- as.character(test_df$Word)
+  counter <- 0
+  for(k in 1:length(common_words)){
+    if(sum(test_df$Word == common_words[k]) > 0){
+      counter <- test_df[test_df$Word == common_words[k],2]
+      print(counter)
+      sour_terms[l, k] <- counter      
+    }else{
+      sour_terms[l, k] <- 0
+    }
+  }
+}
+
+
+```
+
+
+```{r}
+write.csv(sour_terms, "olivia_rodrigo_word_freq.csv")
 ```
